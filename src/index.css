@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#cardxzseleckt{
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px -4px;
+  height: 30px;
+  width: 50px;
+  text-align: center;
+  margin-top: 5px;
+}
+#cardxzseleckt2{
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px -4px;
+  height: 30px;
+  width: 50px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+
