@@ -99,8 +99,8 @@ textarea {
   width: 100vw;
   height: calc(100vh - 80px);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  z-index: 2000000;
+  margin-left: 500px;
   align-items: center;
 }
 
@@ -214,8 +214,55 @@ textarea {
   background: white;
   color: black;
 }
-`
+.loc-animationn{
+height: 60vh;
+width: 350px;
+border-radius: 0px 10px 10px 0;
+box-shadow: 3px 9px 3px 0px grey;
+margin-top: 40px;
+background-color: #b6b2b2;
+align-content: center;
+z-index: -10;
+position: absolute;
+right: 500px;
+}
+#loc-text{
+  background-color: #f0ecec;
+  position: absolute;
+  top: 200px;
+}
 
+#loc-text1{
+  background-color: #f0ecec;
+  position: absolute;
+  top: 250px;
+}
+#loc-animation2:hover{
+  border: 1px solid black;
+}
+@keyframes animat {
+  0%{
+    margin-left: 10px;
+    margin-top: -100px;
+  }
+  50%{
+    margin-left: 100px;
+    margin-top: 100px;
+  }
+  100%{
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
+.animatt{
+  width: 250px;
+  height: 365px;
+  background-color: #757575;
+  /* animation: animat 1s ease-in-out infinite; */
+  margin-top: -489px;
+  margin-left: 180px;
+}
+`
 const login = ({setIsAuth}) =>{
     const signInWithGoogle = () =>{
         signInWithPopup(auth,provider).then((result) =>{
@@ -225,13 +272,25 @@ const login = ({setIsAuth}) =>{
     }
     return(
         <Rec>
-
+          <div className="loc-animationn" id="loc-animation2">
+            <div className="loc-animation1"></div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ullam a, similique soluta aspernatur nobis, ipsum iste, facere repellat incidunt praesentium repellendus illum ut magni nesciunt deleniti veritatis accusamus saepe?</p>
+          </div>
         <div className="loginPage">
-            <p>sign In With</p>
+          <div className="locin-border">
+            <input type="text" id="loc-text" placeholder="name"/>
+            <br />
+            <input type="text" id="loc-text1" placeholder="surname"/>
+            <br />  
+
             <button className="login-with-google-btn" onClick={signInWithGoogle}> 
             sign In With 
             </button>
+          </div>
         </div>
+            <div className="animatt">
+
+            </div>
         </Rec>
     )
 }

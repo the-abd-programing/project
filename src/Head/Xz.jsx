@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 const Deliver = styled('div')`
-height: 89rem;
+height: 120vh;
 width: 353px;
 background-color: #F3F3F3;
 position: absolute;
